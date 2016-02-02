@@ -1,0 +1,8 @@
+{
+  "name": "ionic-es6-awesome-app",
+  "private": "true",
+  "version": "1.1.1",
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.1"
+  }
+}
