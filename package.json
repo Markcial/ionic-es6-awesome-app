@@ -1,18 +1,30 @@
 {
   "name": "ionic-es6-awesome-app",
+  "author": "Agustín Armellini Fischer (@armellini13)",
   "version": "1.1.1",
   "description": "ionic-es6-awesome-app: An Ionic project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armellini13/ionic-es6-awesome-app"
+  },
+  "bugs": {
+    "url": "https://github.com/armellini13/ionic-es6-awesome-app/issues"
+  },
+  "keywords": [
+    "es6",
+    "ionic",
+    "awesome"
+  ],
   "dependencies": {
-    "gulp": "^3.5.6",
-    "gulp-sass": "^2.0.4",
-    "gulp-concat": "^2.2.0",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-rename": "^1.2.0"
+    "ionic-npm": "^1.0.2"
   },
   "devDependencies": {
-    "bower": "^1.3.3",
-    "gulp-util": "^2.2.14",
-    "shelljs": "^0.3.0"
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "watch": "^0.16.0"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
