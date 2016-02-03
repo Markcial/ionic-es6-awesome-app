@@ -19,12 +19,14 @@ class SpotifyMusicApi extends MusicApi {
    * @returns {Promise}
    */
   search(song) {
+    // Example: https://api.spotify.com/v1/search?q=californication&type=track
     return this._$http.get(this._apiUrl + '/search', {
       params: {
         q: song,
         type: 'track'
       }
     }).then(function(response) {
+      // We return the items array!!
       return response.data.tracks.items;
     });
   }
