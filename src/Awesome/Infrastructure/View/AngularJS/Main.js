@@ -7,6 +7,7 @@ import 'babel-polyfill'
 // App imports
 import { IonicConfiguration, IonicRun } from './Config/Config'
 import states from './Config/States'
+import services from './Config/Services/Services'
 import controllers from './Config/Services/Controllers'
 
 /**
@@ -36,9 +37,9 @@ AwesomeApp.config(function($stateProvider, $urlRouterProvider) {
 // Services and Controllers declaration
 var service, controller;
 
-//for (service of services) {
-//  AwesomeApp.service(service.name, service.service);
-//}
+for (service of services) {
+   AwesomeApp.service(service.name, service.service);
+}
 
 for (controller of controllers) {
   AwesomeApp.controller(controller.name, controller.controller);

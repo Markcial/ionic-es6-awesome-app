@@ -17,7 +17,7 @@
     "awesome"
   ],
   "scripts": {
-    "compile": "browserify src/Awesome/Infrastructure/View/**/*.js -o www/js/app.js -e src/Awesome/Infrastructure/View/AngularJS/Main.js -d -t [ babelify ]",
+    "compile": "browserify src/Awesome/**/*.js -o www/js/app.js -e src/Awesome/Infrastructure/View/AngularJS/Main.js -d -t [ babelify ]",
     "compile:watch": "watch 'npm run compile' ./src"
   },
   "dependencies": {
