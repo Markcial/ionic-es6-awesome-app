@@ -22,22 +22,15 @@ AwesomeApp.run(IonicRun);
 // States declaration
 AwesomeApp.config(function($stateProvider, $urlRouterProvider) {
 
-  var key, state;
+  var key;
 
   for (key in states) {
     if (states.hasOwnProperty(key)) {
-
-      state = {
-        url: states[key].url,
-        templateUrl: states[key].templateUrl,
-        controller: states[key].controller
-      };
-
-      $stateProvider.state(states[key].name, state);
+      $stateProvider.state(states[key].name, states[key]);
     }
   }
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/app/home');
 });
 
 // Services and Controllers declaration

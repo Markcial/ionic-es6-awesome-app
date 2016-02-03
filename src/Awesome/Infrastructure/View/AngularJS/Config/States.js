@@ -2,9 +2,28 @@
 
 export default [
   {
-    name: 'Home',
-    url: '/',
-    templateUrl: 'templates/home.html',
-    controller: 'HomeCtrl'
+    name: 'App',
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/menu.html',
+    controller: 'MenuCtrl'
+  }, {
+    name: 'App.Home',
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      }
+    }
+  }, {
+    name: 'App.Search',
+    url: '/search',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/search.html',
+        controller: 'SearchCtrl'
+      }
+    }
   }
 ];
