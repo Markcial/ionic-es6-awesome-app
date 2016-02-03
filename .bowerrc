@@ -1,3 +1,4 @@
 {
   "directory": "www/lib"
+  "allow_root": true
 }
