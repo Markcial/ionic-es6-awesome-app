@@ -151,15 +151,13 @@ Bar.$inject = ['httpService'];
 1- Inside the search page create an input to introduce the song to search and listen to the keyUp event. Then 
 `search.html` should have something like: 
 ```html
-<input type="text" ng-model="songToSearch" ng-keyUp="search()">
+<input type="text" ng-model="song" ng-keyUp="search(song)">
 ```
 
 and the `SearchCtrl` something like:
 ```javascript
 constructor($scope) {
-  $scope.search = function() {
-    var song = $scope.songToSearch;
-    
+  $scope.search = function(song) {
     // Search the song
   }
 }
@@ -172,9 +170,8 @@ service and return an array of Song objects. Remember to declare the services as
 
 ```javascript
 constructor($scope, SearchSong) {
-  $scope.search = function() {
-    var song = $scope.songToSearch,
-        results;
+  $scope.search = function(song) {
+    var results;
     
     // Search the song
     results = SearchSong.search(song);
@@ -190,10 +187,7 @@ SearchCtrl.$inject = ['$scope', 'SearchSong'];
 ```javascript
 // SearchCtrl.js
 constructor($scope) {
-  $scope.search = function() {
-    var song = $scope.songToSearch,
-        results;
-    
+  $scope.search = function(song) {
     // Search the song
     $scope.results = SearchSong.search(song);
   }
@@ -201,7 +195,7 @@ constructor($scope) {
 ```
 
 ```html
-<input type="text" ng-model="songToSearch" ng-keyUp="search()">
+<input type="text" ng-model="song" ng-keyUp="search(song)">
 <ion-list>
     <ion-item ng-repeat="result in results">
     {{result.name()}}
