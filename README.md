@@ -69,7 +69,7 @@ app and sets up the whole application registering the controllers, services, sta
 `AngularJS/Config/Config.js`, `AngularJS/Config/States.js`, `AngularJS/Services/Controllers.js` and `AngularJS/Services/Services.js`.
 
 ### How to create a new page
-1- Go to `src/Awesome/Infrastrcuture/View/AngularJS/Config/States.js` and define a new state, for example:
+1- Go to `src/Awesome/Infrastructure/View/AngularJS/Config/States.js` and define a new state, for example:
 
 ```javascript
 {
@@ -88,7 +88,7 @@ app and sets up the whole application registering the controllers, services, sta
 for this is because we are using Ionic's **side menu**. App is the main state, and the different states that we can access from 
 the side menu are defined like this. For more information read [here](http://ionicframework.com/docs/api/directive/ionSideMenus/).
 
-2- Create the controller in `src/Awesome/Infrastrcuture/View/AngularJS/Controllers/Foo.js`
+2- Create the controller in `src/Awesome/Infrastructure/View/AngularJS/Controllers/Foo.js`
 
 ```javascript
 class FooCtrl {
@@ -104,7 +104,7 @@ export default FooCtrl;
 
 Remember to add into the $inject array all the services you want to inject to the controller.
 
-3- Declare the controller inside `src/Awesome/Infrastrcuture/View/AngularJS/Config/Services/Controllers.js`
+3- Declare the controller inside `src/Awesome/Infrastructure/View/AngularJS/Config/Services/Controllers.js`
 ```javascript
 {
   name: 'FooCtrl',
@@ -134,7 +134,7 @@ class Bar {
 
 export default Bar;
 ```
-2- Declare the service inside `src/Awesome/Infrastrcuture/View/AngularJS/Config/Services/Services.js`
+2- Declare the service inside `src/Awesome/Infrastructure/View/AngularJS/Config/Services/Services.js`
 ```javascript
 {
   name: 'Bar',
