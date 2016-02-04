@@ -25,5 +25,14 @@ export default [
         controller: 'SearchCtrl'
       }
     }
+  }, {
+    name: 'App.Foo',
+    url: '/foo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/foo.html',
+        controller: 'HomeCtrl'
+      }
+    }
   }
 ];

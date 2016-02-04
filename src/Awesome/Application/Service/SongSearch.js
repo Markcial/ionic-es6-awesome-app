@@ -1,13 +1,15 @@
 'use strict';
 
+import Song from '../../Domain/Model/Song/Song';
+
 /**
  * @name SongSearch
  * @description Service that searches for awesome songs.
  */
-class SongSearch {
+class SongSearch  {
 
-  constructor() {
-
+  constructor(MusicApi) {
+    this.api = MusicApi;
   }
 
   /**
@@ -15,8 +17,15 @@ class SongSearch {
    * @returns {Array}
    */
   search(song) {
-    // TODO: Call music api and return an array of Song objects
-    return [];
+    return this.api.search(song).then((items) => {
+      var songs = [];
+      items.forEach((item) => {
+        var song = new Song(item.name, item.artists.map((artist) => artist.name).join(", "), item.album.images[0].url);
+        songs.push(song);
+      });
+
+      return songs;
+    });
   }
 }
 

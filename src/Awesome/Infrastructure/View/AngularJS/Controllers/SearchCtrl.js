@@ -6,11 +6,15 @@
  */
 class SearchCtrl {
 
-  constructor($scope) {
+  constructor($scope, SongSearch) {
+    $scope.search = function(song) {
+      var promise = SongSearch.search(song);
 
+      promise.then((results) => $scope.results = results )
+    }
   }
 }
 
-SearchCtrl.$inject = ['$scope'];
+SearchCtrl.$inject = ['$scope', 'SongSearch'];
 
 export default SearchCtrl;

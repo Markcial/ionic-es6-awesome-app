@@ -11,7 +11,7 @@ class SpotifyMusicApi extends MusicApi {
   constructor($http) {
     super();
     this._$http = $http;
-    this._apiUrl = 'https://api.spotify.com/'
+    this._apiUrl = 'https://api.spotify.com/v1'
   }
 
   /**
